@@ -1,7 +1,50 @@
-<div class="home clipPath--mtn2--TB">
+<div class="home mountain-seperator">
   <%= video_tag( 'Cover.MP4', id: 'video', autoplay: true, loop: true, muted: true )%>
 
   <div class="home-content">
-    <h1>Bereit für Abendteuer?</h1>
+    <h1><span class="pre">Bereit für</span><br>Abendteuer?</h1>
   </div>
 </div>
+
+<%# Highlights Section%>
+
+<section class="mt-5">
+  <h1>Highlights</h1>
+
+  <%# Video mit Link zu Post %>
+  <p>Biking, Skitouren, Rafting und vieles mehr ...</p>
+  <div class="d-flex justify-content-center">
+    <div class="button">
+      <a href="#">Entdecke meine Projekte</a>
+    </div>
+  </div>
+</section>
+
+<%# Über mich Section %>
+
+<section id="about" class="mt-5">
+  <div class="d-flex align-items-center">
+    <div class="m-5">
+      <p><span class="quote">"Ich erzähle echte Geschichten<br> - reale Outdoor Abenteuer"</span></p>
+    </div>
+    <%= image_tag("Pete.png", width: "250") %>
+  </div>
+</section>
+
+<%# Stats Section %>
+
+<section id="stats">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <p><span class="number">70</span></p>
+      </div>
+      <div class="col-4">
+        <p><span class="number">70</span></p>
+      </div>
+      <div class="col-4">
+        <p><span class="number">70</span></p>
+      </div>
+    </div>
+  </div>
+</section>
