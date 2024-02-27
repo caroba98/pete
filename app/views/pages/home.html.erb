@@ -33,18 +33,30 @@
 
 <%# Stats Section %>
 
-<section id="stats">
+<section id="stats" data-controller="counter">
   <div class="container">
     <div class="row">
-      <div class="col-4">
-        <p><span class="number">70</span></p>
+      <div class="col-4" data-toggle-target="number">
+        <p><span class="number" akhi="70" data-action="onload->counter#count">0</span></p>
+        <p>bereiste Länder</p>
       </div>
-      <div class="col-4">
-        <p><span class="number">70</span></p>
+      <div class="col-4" data-toggle-target="number">
+        <p><span class="number" akhi="170" data-action="onload->counter#count">0</span>m</p>
+        <p>höchster bestiegener Punkt</p>
       </div>
-      <div class="col-4">
-        <p><span class="number">70</span></p>
+      <div class="col-4" data-toggle-target="number">
+        <p><span class="number" akhi="10" data-action="onload->counter#count">0</span></p>
+        <p>Mal die Alpen überquert</p>
       </div>
     </div>
+  </div>
+</section>
+
+<%# Veröffentlichung Section %>
+
+<section id="article">
+  <h1>Meine Veröffentlichungen</h1>
+  <div class="d-flex align-items-center">
+    
   </div>
 </section>
