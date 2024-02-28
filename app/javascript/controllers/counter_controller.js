@@ -2,22 +2,24 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="counter"
 export default class extends Controller {
-  static targets = ["number"]
-  
-  count() {
-    this.numberTarget.forEach( counter => {
-      const animate = () => {
-          const value = +counter.getAttribute('akhi');
-          const data = +counter.innerText;
-          const time = value / 200;
-        if(data < value) {
-              counter.innerText = Math.ceil(data + time);
-              setTimeout(animate, 1);
-            }else{
-              counter.innerText = value;
-            }
-      }
-      animate();
-    });
+  static targets = ["value"]
+
+  connect() {
+    console.log("hi");
+    this.startCounter();
   }
+
+  startCounter() {
+    const speed = 200;
+    const value = this.valueTarget.getAttribute('akhi');
+    const data = this.valueTarget.innerText;
+    const time = value / speed;
+    while(data < value) {
+      this.valueTarget.innerText = Math.ceil(data + time);
+        setTimeout(this.startCounter, 1);
+      // }else{
+      //   this.valueTarget.innerText = value;
+      }
+  }
+
 }
