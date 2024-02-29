@@ -14,7 +14,7 @@ export default class extends Controller {
     const value = this.valueTarget.getAttribute('akhi');
     const data = this.valueTarget.innerText;
     const time = value / speed;
-    while(data < value) {
+    if(data < value) {
       this.valueTarget.innerText = Math.ceil(data + time);
         setTimeout(this.startCounter, 1);
       // }else{
