@@ -21,7 +21,7 @@ export default class extends Controller {
       if (count > number) {
         clearInterval(interval);
       }
-    }, 20); // Loop every second
+    }, 30); // Loop every second
   }
 
   startLoopTwo() {
@@ -45,6 +45,6 @@ export default class extends Controller {
       if (count > number) {
         clearInterval(interval);
       }
-    }, 50); // Loop every second
+    }, 100); // Loop every second
   }
 }
